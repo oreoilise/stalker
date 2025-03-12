@@ -1,0 +1,69 @@
+body {
+    background-color: #000;    
+    margin: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+  @keyframes neonGlow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff0080, 0 0 20px #ff0080; }
+    50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff0080, 0 0 20px #ff0080; }
+  }
+  h1 {
+    animation: neonGlow 1.5s infinite alternate;
+  }
+  p {
+    transition: text-shadow 0.3s ease-in-out;
+  }
+  
+  p {
+    text-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080;
+  }
+  
+  .kiss {
+    position: absolute;
+    font-size: 30px;
+    opacity: 1;
+    animation: pop-kiss 1s ease-out forwards;
+  }
+  
+  body {
+    overflow: hidden; /* Prevents scrolling */
+  }
+  
+  .kiss {
+    position: absolute;
+    font-size: 30px;
+    opacity: 1;
+    animation: pop-kiss 1s ease-out forwards;
+  }
+  
+  @keyframes pop-kiss {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+  }
+  /* Force normal (non-glowing) font inside the modal */
+  .modal-content h2,
+  .modal-content p {
+    font-family: Arial, sans-serif;      /* A normal, clean font */
+    text-shadow: none !important;       /* Remove any neon/glow shadow */
+    color: #000 !important;             /* Force black text */
+    margin: 1rem 0;                     /* Space between lines */
+  }
+  
+  /* Adjust font sizes to make them bigger */
+  .modal-content h2 {
+    font-size: 2rem; /* Increase as needed */
+  }
+  .modal-content p {
+    font-size: 1.2rem; /* Increase as needed */
+  }
